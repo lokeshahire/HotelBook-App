@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    #navbar {
+      display: flex;
+      justify-content: space-around;
+      color: aliceblue;
+      background-color: black;
+      text-decoration: none;
+    }
+
+    #query {
+      width: 500px;
+      height: 38px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #login {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-top: 15px;
+      margin-right: -200px;
+    }
+
+    #signup {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    #sorting {
+      display: flex;
+      justify-content: space-around;
+      height: 50px;
+      background-color: rgb(19, 223, 230);
+      text-decoration: none;
+    }
+
+    #sorting button {
+      width: 150px;
+      margin-top: 10px;
+      height: 30px;
+      background-color: rgb(232, 162, 11);
+    }
+
+    #hotels_list {
+      display: grid;
+      grid-template-columns: 500px 500px 500px;
+
+    }
+
+    #hotel {
+      width: 400px;
+      /* border: 1px solid red; */
+    }
+
+    #hotel img {
+      width: 400px;
+      /* border: 1px solid red; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <h2>Hotel App</h2>
+    <input type="text" id="query" oninput="hotelFun()" placeholder="ony enter goa or mumbai ">
+
+    <div id="login"> <a href="./login.html" style="text-decoration: none; color:aliceblue">Log-In</a> </div>
+    <div id="signup"> <a href="./signup.html" style="text-decoration: none; color:aliceblue">Sign-Up</a> </div>
+    <!-- the search-box id:- "query"
+ - the log-in and sign-up link will have ids:- "login" and "signup" -->
+  </div>
+  <div id="sorting">
+
+    <button id="sort_lth" onclick="LowHigh()">Price Low to High</button>
+    <button id="sort_htl" onclick="highLow()">Price High to Low</button>
+    <button id="filter_ac" onclick="fliterAc()">AC</button>
+    <button id="filter_nonac" onclick="fliterNonAc()">Non AC</button>
+    <!-- sort by price low to high Id:- "sort_lth"
+ - sort by price high to low Id:- "sort_htl"
+ - Filter Ac hotels Id:- "filter_ac"
+ - Filter Non Ac hotels Id:- "filter_nonac" -->
+  </div>
+  <div id="hotels_list">
+    <!-- - Append all fetched hotels inside div with id:- "hotels_list"
+ - Every hotel card will have id:-  "hotel"
+ - The book now button will have class as "book" -->
+  </div>
+</body>
+
+</html>
+
+<script src="./scripts/index.js"></script>
